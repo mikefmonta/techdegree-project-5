@@ -1,0 +1,69 @@
+// ===========================================================
+// Variables
+// ===========================================================
+
+// Font Stacks
+$font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+$font-weight--thin       : 100; //thin
+$font-weight--light      : 300; //light
+$font-weight--medium     : 400; //medium
+$font-weight--bold       : 700; //bold
+$font-weight--ultra-bold : 900; //ultra bold
+
+// Gutter Variables
+$gutter                  : 35px; //Page guttes
+
+// Base Colors
+$white              : #fff;
+$black              : #000;
+$gray               : #797e83;
+
+$viking             : #58e1c1; //Main page theme color
+$malibu             : #51ddfc; //Form Submit button
+
+// UI Colors
+$ui-colors: (
+	default : $viking,
+	success : #5ece7f,
+	error   : #e67478,
+	warning : #ff784f,
+	info    : #9279c3
+);
+
+// Color Usage
+$color-primary   : $viking;
+$color-shadow    : rgba($black, .2);
+
+//Form
+$form-submit        : $malibu; //Form Submit button
+
+// Quote
+$quote              : $viking; //Quote Section
+
+// Text
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Breakpoints
+$brkpoint-sm        : 480px;
+$brkpoint-md        : 769px;
+$brkpoint-lg        : 1400px;
+
+//Button Radius
+$br-default         : .4em;
+$br-rounded         : 50%;
+
+//Grid Buttons
+$bg-colors: ('12': #80e8d1, 
+            '6': #3fabca,
+             '4': #7ee6fd,
+             '3': #deb2ee,
+             '5': #88d9a0,
+             '7': #ec9fa3,
+             '8': #fd9f85
+             );

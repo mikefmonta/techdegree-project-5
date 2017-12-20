@@ -1,0 +1,77 @@
+// ===========================================================
+// Mixins
+// ===========================================================
+
+//Button
+@mixin button ($w, $h, $brdr: null) {
+    width: $w;
+    height: $h;
+    border: $brdr;
+    border-radius: $br-default;
+    @content;
+}
+
+//Flex Box
+@mixin flexy (
+    $disp: flex,
+    $dir: null,
+    $wrap: null, 
+    $just: null) {
+        display: $disp;
+        flex-direction: $dir;
+        flex-wrap: $wrap;
+        justify-content: $just;
+    @content;
+}
+
+//BEM selectors
+@mixin e($element) {
+	&__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+//Button Section
+@mixin bg-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;    
+		}
+	}
+}
+
+[class^="btn--"] {
+    @extend %centered;
+    @extend %btn;
+    margin-bottom: em(20px, 14px); 
+    text-transform: uppercase;
+    color: $white;
+    font-weight: $font-weight--bold;
+  }
+
+//Media queries
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+   @else {
+   	@error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}

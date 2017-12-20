@@ -1,0 +1,27 @@
+// ===========================================================
+// Base Styles
+// ===========================================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: $font-family--primary;
+    border-style: none;
+    font-size: $base__font-size;
+}
+
+body {
+}
+
+.container {
+    margin-right: $gutter;
+    margin-left: $gutter;
+}
+
+.link {
+    color: $malibu;
+    font-weight: $font-weight--bold;
+    text-decoration: none;
+}

@@ -1,0 +1,37 @@
+// ===========================================================
+// Form Styles
+// ===========================================================
+
+.form {
+    @include flexy($dir: column, $just: center);
+    color: $gray;
+
+	@include e(label) {
+		@include m(hidden) {
+			@extend .srt;
+		}
+		display: block;
+		margin-bottom: em(10px);
+	}
+
+	@include e(input) {
+		font-size : em(18px);
+        font-weight: $font-weight--bold;
+        text-indent: em(15px);
+        margin-bottom: em(20px);
+        height: em(50px);
+        border-bottom: em(7px) solid $viking;
+
+		&:focus {	
+            background-color: lighten($viking, 20%);
+		}
+    }
+
+    .btn--default {
+        @extend %btn;
+        background-color: $malibu;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: $font-weight--bold;
+	}
+}

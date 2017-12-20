@@ -1,0 +1,19 @@
+// ===========================================================
+// Image Styles
+// ===========================================================
+
+//Framed Image
+.img--frame {
+    margin-top: em(25px);
+    width: 100%;
+    padding: em(12px);
+    border: 1px solid lighten($gray, 30%);
+}
+
+//Avatar Image
+.img--avatar {
+    @extend %centered;
+    display: block;
+    align-self: center;
+    padding: em(15px);
+}

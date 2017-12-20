@@ -1,0 +1,29 @@
+// ===========================================================
+// Grid Styles
+// ===========================================================
+
+.grid__row {
+    margin-top: em(20px);
+    margin-bottom: em(20px);
+}
+
+//Grid Column Colors
+@each $theme, $color in $bg-colors {
+    .theme__colors.grid__col--#{$theme} {
+      background-color: $color;
+    }
+  }
+
+//Grid button styles
+[class*="grid__col--"] {
+    width: 100%;
+    margin-bottom: em(5px);
+      &.theme__colors {
+      @extend %btn;
+      @include flexy();
+      align-items: center;
+      color: $gray;
+      font-weight: $font-weight--bold;
+      padding-left: em(15px);
+      } 
+  }

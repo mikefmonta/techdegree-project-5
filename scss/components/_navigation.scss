@@ -1,0 +1,45 @@
+// ===========================================================
+// Navigation Styles
+// ===========================================================
+
+//Top logo
+.img--logo {
+    display: block;
+    padding-top: em(30px);
+    padding-bottom: em(30px);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(large) {
+        margin: 0;
+        @include flexy(row, wrap, center);
+        border: 1px solid red;
+    }
+}
+
+//Nav items
+.nav a {
+    display: block;
+    color: #797e83;
+    font-size: 1.125em;
+    font-weight: 300;
+    text-align: center;
+    padding: .8em;
+    border-radius: $br-default;
+    text-decoration: none;
+    &:hover {
+        background-color: $viking;
+        color: $white;
+    }
+}
+
+.nav {
+    display: block;
+    margin-bottom: 60px;
+
+    @include mq(large) {
+        @include flexy();
+        align-content: flex-start;
+        border: 1px solid red;
+    }
+}
