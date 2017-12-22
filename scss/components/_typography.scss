@@ -3,14 +3,11 @@
 // ===========================================================
 
 .card {
-    @extend %clearfix;
-    margin-top: em(40px);
-    margin-bottom: em(40px);
     color: $gray;
 }
 
 p {
-    line-height: (27px / 18px);    
+    line-height: (27px / 18px);
 }
 
 .headline--primary {
@@ -24,7 +21,6 @@ p {
     color: $gray;
     font-size: em(20px);
     font-weight: $font-weight--light;
-    margin-top: em(40px);
     margin-bottom: em(5px);
 }
 
@@ -36,8 +32,4 @@ p {
     padding-left: em(20px);
     border-radius: $br-default;
     border-left: 10px solid $viking;
-}
-
-.grid__row {
-    @include flexy(column, nowrap, center);
 }

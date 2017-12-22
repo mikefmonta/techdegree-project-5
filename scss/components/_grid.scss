@@ -2,11 +2,6 @@
 // Grid Styles
 // ===========================================================
 
-.grid__row {
-    margin-top: em(20px);
-    margin-bottom: em(20px);
-}
-
 //Grid Column Colors
 @each $theme, $color in $bg-colors {
     .theme__colors.grid__col--#{$theme} {
@@ -27,3 +22,46 @@
       padding-left: em(15px);
       } 
   }
+
+  //Media queries
+
+  .grid__row {
+    margin-top: em(30px);
+    margin-bottom: em(30px);
+    @include mq(large) {
+      @include flexy($wrap: nowrap, $just: center);
+      align-items: center;
+      }
+      
+      .grid__col--3 { //Logo Image Grid
+        @include mq(large) {
+            padding: em(20px);
+            width: 25%;
+        }
+      }
+
+      .grid__col--12 p { //Quote After Nav Grid
+        font-size: 1.15em;
+        margin-top: em(50px);
+        margin-bottom: em(50px);
+      }
+
+      .grid__col--8 {  //Typography Section Grid
+        @include mq(large) {
+            align-self: flex-start;
+            width: 100%;
+        }
+      }
+
+      .grid__col--4 { //Form Grid
+        @include mq(large) {
+            width: 50%;
+        }
+    }
+
+      .grid__col--12 { //Buttons
+        @include mq(large) {
+          @include flexy();
+          }
+        }
+      } 

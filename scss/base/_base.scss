@@ -12,12 +12,15 @@
     font-size: $base__font-size;
 }
 
-body {
-}
 
 .container {
+    @include flexy($dir: column, $wrap: nowrap, $just: center);
     margin-right: $gutter;
     margin-left: $gutter;
+
+    @include mq(large) {
+        max-width: 1400px;
+    }
 }
 
 .link {

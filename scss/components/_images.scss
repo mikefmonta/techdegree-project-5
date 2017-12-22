@@ -8,12 +8,16 @@
     width: 100%;
     padding: em(12px);
     border: 1px solid lighten($gray, 30%);
+
+    @include mq(large) {
+        max-width: em(425px); //Sets Max width for image
+        margin-left: em(50px); //Moves it to the right a little
+    }
 }
 
 //Avatar Image
 .img--avatar {
     @extend %centered;
     display: block;
-    align-self: center;
     padding: em(15px);
 }

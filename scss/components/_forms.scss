@@ -11,7 +11,7 @@
 			@extend .srt;
 		}
 		display: block;
-		margin-bottom: em(10px);
+        margin-bottom: em(10px);
 	}
 
 	@include e(input) {
@@ -33,5 +33,12 @@
         color: $white;
         text-transform: uppercase;
         font-weight: $font-weight--bold;
-	}
+    }
+
+    @include mq(large) {
+        margin-left: em(30px);
+    }
 }
+
+
+

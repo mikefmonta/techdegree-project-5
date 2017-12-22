@@ -37,11 +37,11 @@
 }
 
 //Button Section
-@mixin bg-colors($map) {
+@mixin bg-colors($map) { //Give color to the buttons
 	@each $theme, $color in $map {
 		&--#{$theme} {
 			background-color: $color;    
-		}
+    }
 	}
 }
 
