@@ -21,6 +21,12 @@
       font-weight: $font-weight--bold;
       padding-left: em(15px);
       } 
+      @include mq(large){
+        & + & {
+          margin-left: 15px; //Bottom Grid Spacing
+        }
+      }
+      
   }
 
   //Media queries
@@ -31,6 +37,7 @@
     @include mq(large) {
       @include flexy($wrap: nowrap, $just: center);
       align-items: center;
+      @include griddy();
       }
       
       .grid__col--3 { //Logo Image Grid
@@ -65,3 +72,4 @@
           }
         }
       } 
+

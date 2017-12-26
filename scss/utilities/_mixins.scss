@@ -2,6 +2,23 @@
 // Mixins
 // ===========================================================
 
+//Media queries
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+   @else {
+   	@error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}
+
 //Button
 @mixin button ($w, $h, $brdr: null) {
     width: $w;
@@ -52,26 +69,17 @@
     text-transform: uppercase;
     color: $white;
     font-weight: $font-weight--bold;
+    @include mq(large) {
+      max-width: em(180px);
+    }
   }
 
-//Media queries
-@mixin mq($break) {
-  @if $break == "small" {
-    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
-      @content;
+
+//Grid Media Queries
+@mixin griddy() {
+  @for $i from 2 through 12 {
+      .grid__col--#{$i} {
+        width: ($i / 12) * 100%;
     }
-  }
-  @else if $break == "medium" {
-    @media (min-width: $brkpoint-md) {
-      @content;
-    }
-  }
-  @else if $break == "large" {
-    @media (min-width: $brkpoint-lg) {
-      @content;
-    }
-  }
-   @else {
-   	@error "Whoops! No value could be retrieved for `#{$break}`. "
   }
 }
